@@ -569,7 +569,7 @@ app.get("/cartfetch", verifyAccessToken, async (req, res) => {
   }
 });
 
-app.post("/bagstore",  async (req, res) => {
+app.post("/bagstore", verifyAccessToken,  async (req, res) => {
   try {
     const { productId } = req.body;
     if (!productId)
@@ -613,7 +613,7 @@ app.post("/bagstore",  async (req, res) => {
   }
 });
 
-app.post("/bagremove", async (req, res) => {
+app.post("/bagremove",  verifyAccessToken,async (req, res) => {
   try {
     const { productId } = req.body;
     if (!productId)
@@ -636,7 +636,7 @@ app.post("/bagremove", async (req, res) => {
 });
 
 // -------------------- Wishlist --------------------
-app.get("/wishlistfetch",  async (req, res) => {
+app.get("/wishlistfetch",  verifyAccessToken, async (req, res) => {
   try {
     const user = await Userdata.findById(req.user.id);
     if (!user.wishlist || user.wishlist.length === 0)
@@ -695,7 +695,7 @@ app.post("/wishliststore", verifyAccessToken, async (req, res) => {
   }
 });
 
-app.post("/wishlistremove", async (req, res) => {
+app.post("/wishlistremove", verifyAccessToken, async (req, res) => {
   try {
     const { productId } = req.body;
     if (!productId)
