@@ -57,19 +57,7 @@ const createAccessToken = (user) =>
 const createRefreshToken = (user) =>
   jwt.sign({ id: user._id, email: user.email }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "30d" });
 
-const accessCookieOptions = {
-  httpOnly: true,
-  secure: true,
-  sameSite: "lax",
-  maxAge: 15 * 60 * 1000,
-};
 
-const refreshCookieOptions = {
-  httpOnly: true,
-  secure: true,
-  sameSite: "lax",
-  maxAge: 30 * 24 * 60 * 60 * 1000,
-};
 
 
 
