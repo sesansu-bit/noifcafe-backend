@@ -1,0 +1,509 @@
+[
+  
+  {
+    "id": "1",
+    "image": "https://i.pinimg.com/736x/bc/ff/38/bcff386f9fc9f711a28263b68c72ef8c.jpg",
+    "company": "Black Roasters",
+    "original_price": 320,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "12k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "2",
+    "image": "https://i.pinimg.com/736x/ac/21/c3/ac21c32722dd5a79f48734c7e760e0ee.jpg",
+    "company": "Urban Bean",
+    "original_price": 345,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.4, "count": "9k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "3",
+    "image": "https://i.pinimg.com/1200x/12/12/48/121248a53d723f875a6ebf5ef880f3d3.jpg",
+    "company": "Copper Coffee Co.",
+    "original_price": 399,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "18k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "4",
+    "image": "https://i.pinimg.com/736x/28/20/42/2820427406ca54b2a8d0faede7c51296.jpg",
+    "company": "Roast House",
+    "original_price": 365,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.5, "count": "7k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "5",
+    "image": "https://i.pinimg.com/736x/ec/80/3c/ec803c1e125a0e765d503c539cb16663.jpg",
+    "company": "Arabica Grounds",
+    "original_price": 410,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.8, "count": "22k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "6",
+    "image": "https://i.pinimg.com/736x/2e/69/c5/2e69c59a715de367f19065c079798dad.jpg",
+    "company": "Prime Caffeine",
+    "original_price": 390,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "15k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "7",
+    "image": "https://i.pinimg.com/736x/2b/1a/1f/2b1a1f08f6658cd3faadbcac89914331.jpg",
+    "company": "Grounded Bros",
+    "original_price": 355,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.3, "count": "11k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "8",
+    "image": "https://i.pinimg.com/736x/0c/0e/09/0c0e099a666b70e58905d85c559a8d96.jpg",
+    "company": "Steam & Roast",
+    "original_price": 415,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "19k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "9",
+    "image": "https://i.pinimg.com/736x/4b/6c/4d/4b6c4df2799d267595fd037268869949.jpg",
+    "company": "Bold Beans Co.",
+    "original_price": 380,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.4, "count": "8k" },
+    "category": "Espresso"
+  },
+  {
+    "id": "10",
+    "image": "https://i.pinimg.com/736x/a6/c8/f9/a6c8f9f653d4359c908968e58d9aee3a.jpg",
+    "company": "Oak Roast",
+    "original_price": 435,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.9, "count": "25k" },
+    "category": "Espresso"
+  }
+,
+
+  {
+    "id": "11",
+    "image": "https://i.pinimg.com/736x/69/eb/25/69eb25ebc50ec0c1684f3f4dd09ebba9.jpg",
+    "company": "Urban Brew",
+    "original_price": 280,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.3, "count": "6k" },
+    "category": "Americano"
+  },
+  {
+    "id": "12",
+    "image": "https://i.pinimg.com/736x/77/03/4f/77034f229af46f7496e4a110876b2d9f.jpg",
+    "company": "Classic Cup Co.",
+    "original_price": 295,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.4, "count": "7k" },
+    "category": "Americano"
+  },
+  {
+    "id": "13",
+    "image": "https://i.pinimg.com/736x/f2/39/02/f2390215f4af0312a675cb4473f76ff0.jpg",
+    "company": "Fresh Roast",
+    "original_price": 310,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.2, "count": "5k" },
+    "category": "Americano"
+  },
+  {
+    "id": "14",
+    "image": "https://i.pinimg.com/736x/a7/66/02/a7660240e38bab487b41b0aa82adf309.jpg",
+    "company": "Daily Bean",
+    "original_price": 300,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.1, "count": "4k" },
+    "category": "Americano"
+  },
+  {
+    "id": "15",
+    "image": "https://i.pinimg.com/736x/7a/7f/f5/7a7ff5f8508a1ba0c5c82027577403d8.jpg",
+    "company": "Steamline Coffee",
+    "original_price": 325,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.5, "count": "9k" },
+    "category": "Americano"
+  },
+  {
+    "id": "16",
+    "image": "https://i.pinimg.com/1200x/c9/9c/f7/c99cf76425605a8cfe853589352397f2.jpg",
+    "company": "Caffeine Bros",
+    "original_price": 290,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.2, "count": "6k" },
+    "category": "Americano"
+  },
+  {
+    "id": "17",
+    "image": "https://i.pinimg.com/1200x/4a/63/e4/4a63e4af54fc2d55009e0b25d37e3123.jpg",
+    "company": "Barista Barrel",
+    "original_price": 315,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.3, "count": "8k" },
+    "category": "Americano"
+  },
+  {
+    "id": "18",
+    "image": "https://i.pinimg.com/736x/9e/b4/01/9eb401d4a73c7776b55727c1ffa4e47d.jpg",
+    "company": "Heritage Beans",
+    "original_price": 330,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.4, "count": "10k" },
+    "category": "Americano"
+  },
+  {
+    "id": "19",
+    "image": "https://i.pinimg.com/1200x/20/04/d7/2004d7c71df721e985de8eadf215051d.jpg",
+    "company": "Royal Roast",
+    "original_price": 340,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "12k" },
+    "category": "Americano"
+  },
+  {
+    "id": "20",
+    "image": "https://i.pinimg.com/1200x/45/89/7b/45897b2a97b760464f5719fb8c17dffe.jpg",
+    "company": "Brown Bean Co.",
+    "original_price": 350,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "14k" },
+    "category": "Americano"
+  },
+  
+  {
+    "id": "21",
+    "image": "https://i.pinimg.com/736x/61/75/1f/61751f3340a3eecb484b447d24911393.jpg",
+    "company": "Velvet Roast",
+    "original_price": 420,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "13k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "22",
+    "image": "https://i.pinimg.com/1200x/46/e1/81/46e181977bf450e43c0ce72ad3ecf0e1.jpg",
+    "company": "Creamy Cup Co.",
+    "original_price": 450,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "15k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "23",
+    "image": "https://i.pinimg.com/736x/55/7c/a8/557ca80db319b561b56aecef327fc126.jpg",
+    "company": "Froth & Brew",
+    "original_price": 465,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.5, "count": "11k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "24",
+    "image": "https://i.pinimg.com/1200x/c6/ed/b7/c6edb7adf43c1f5917941d984ab02c1e.jpg",
+    "company": "Milk Roast",
+    "original_price": 480,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.8, "count": "17k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "25",
+    "image": "https://i.pinimg.com/736x/9f/d9/d5/9fd9d5dcf2c76d24eaf3781f5b82a3e5.jpg",
+    "company": "Cafe Silk",
+    "original_price": 495,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "12k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "26",
+    "image": "https://i.pinimg.com/736x/3d/6c/eb/3d6ceb39e1118b2542c71add371c3543.jpg",
+    "company": "Golden Roast",
+    "original_price": 510,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "16k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "27",
+    "image": "https://i.pinimg.com/1200x/94/cb/0f/94cb0f442c26d43ad3d4335c145086da.jpg",
+    "company": "Foam Masters",
+    "original_price": 525,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.4, "count": "10k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "28",
+    "image": "https://i.pinimg.com/736x/64/5c/76/645c76e8341d1162a55aa766aff690f3.jpg",
+    "company": "Whipped Bean Co.",
+    "original_price": 540,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "18k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "29",
+    "image": "https://i.pinimg.com/736x/b3/da/13/b3da13ca88932d58ae403bb0f85f926f.jpg",
+    "company": "Smooth Roast",
+    "original_price": 560,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.9, "count": "22k" },
+    "category": "Cappuccino"
+  },
+  {
+    "id": "30",
+    "image": "https://i.pinimg.com/736x/44/79/17/447917b8b20403052c48187bc09216f2.jpg",
+    "company": "Cream Roast Co.",
+    "original_price": 575,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.8, "count": "26k" },
+    "category": "Cappuccino"
+  }
+,
+{
+    "id": "31",
+    "image": "https://i.pinimg.com/736x/93/49/b6/9349b67b55934b241783848ed50d507d.jpg",
+    "company": "Choco Brew",
+    "original_price": 520,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "19k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "32",
+    "image": "https://i.pinimg.com/736x/ca/1b/92/ca1b9252a556162626ce74aed562059c.jpg",
+    "company": "Dark Velvet Co.",
+    "original_price": 545,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.8, "count": "22k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "33",
+    "image": "https://i.pinimg.com/736x/ad/45/12/ad451231add849a81a7f0e257c237c3b.jpg",
+    "company": "Mocha House",
+    "original_price": 560,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "14k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "34",
+    "image": "https://i.pinimg.com/736x/cb/db/4b/cbdb4bf92b31e5ba931a7db0393856ea.jpg",
+    "company": "Choco Steam",
+    "original_price": 585,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.9, "count": "28k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "35",
+    "image": "https://i.pinimg.com/736x/7e/c5/a7/7ec5a7e4b62e4db1ba37c99beedcab9e.jpg",
+    "company": "Rich Roast",
+    "original_price": 600,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "18k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "36",
+    "image": "https://i.pinimg.com/736x/60/ce/68/60ce68aad5d5876e19c62519e7d04721.jpg",
+    "company": "Silk & Cocoa",
+    "original_price": 625,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.8, "count": "27k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "37",
+    "image": "https://i.pinimg.com/736x/b7/58/64/b75864a0c48f45f5ae689275d85cd5c2.jpg",
+    "company": "Brown Velvet",
+    "original_price": 590,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "16k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "38",
+    "image": "https://i.pinimg.com/736x/f3/5b/a5/f35ba5f4aca0f80be72acc674a8018eb.jpg",
+    "company": "Chocolate Bean Co.",
+    "original_price": 610,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "21k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "39",
+    "image": "https://i.pinimg.com/736x/95/e1/cb/95e1cb21924371d788c28cbe89c107b5.jpg",
+    "company": "Cocoa Brew Labs",
+    "original_price": 640,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.9, "count": "33k" },
+    "category": "Mocha"
+  },
+  {
+    "id": "40",
+    "image": "https://i.pinimg.com/736x/58/84/f2/5884f25c00973addf4fc2b4a55b949e4.jpg",
+    "company": "Premium Roast",
+    "original_price": 675,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 5.0, "count": "41k" },
+    "category": "Mocha"
+  },
+
+  {
+    "id": "41",
+    "image": "https://i.pinimg.com/1200x/51/1c/e5/511ce5b8b9e45beccac6bc7ac323ec3e.jpg",
+    "company": "Milky Brew",
+    "original_price": 360,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.4, "count": "9k" },
+    "category": "Latte"
+  },
+  {
+    "id": "42",
+    "image": "https://i.pinimg.com/736x/e6/0d/46/e60d466db9b9bd88b1d308fe8e36b253.jpg",
+    "company": "Latte House",
+    "original_price": 375,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.5, "count": "11k" },
+    "category": "Latte"
+  },
+  {
+    "id": "43",
+    "image": "https://i.pinimg.com/1200x/6e/ac/09/6eac090ada4abb0e15593c862354c244.jpg",
+    "company": "Cream & Steam",
+    "original_price": 395,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "13k" },
+    "category": "Latte"
+  },
+  {
+    "id": "44",
+    "image": "https://i.pinimg.com/1200x/4b/cd/a4/4bcda450ec8b2c31cd5761cd687db6b9.jpg",
+    "company": "Silky Beans",
+    "original_price": 405,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.5, "count": "12k" },
+    "category": "Latte"
+  },
+  {
+    "id": "45",
+    "image": "https://i.pinimg.com/1200x/37/f0/ee/37f0ee4f3b1ef4e39dc4241b1cdca2ae.jpg",
+    "company": "White Roast",
+    "original_price": 420,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "15k" },
+    "category": "Latte"
+  },
+  {
+    "id": "46",
+    "image": "https://i.pinimg.com/736x/de/bb/ea/debbeaf8bfe4b91165ece65213e14012.jpg",
+    "company": "Cafe Smooth",
+    "original_price": 435,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.6, "count": "14k" },
+    "category": "Latte"
+  },
+  {
+    "id": "47",
+    "image": "https://i.pinimg.com/736x/c3/cf/a6/c3cfa6d235e2be0fa8b56b492920b2dc.jpg",
+    "company": "Soft Roast",
+    "original_price": 450,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.8, "count": "18k" },
+    "category": "Latte"
+  },
+  {
+    "id": "48",
+    "image": "https://i.pinimg.com/1200x/b4/16/99/b416998fd465dfa2c8ecec56eb5f5b56.jpg",
+    "company": "Cream Cloud Co.",
+    "original_price": 460,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.7, "count": "16k" },
+    "category": "Latte"
+  },
+  {
+    "id": "49",
+    "image": "https://i.pinimg.com/1200x/40/0f/6d/400f6d4adc5fef48568406d7f102a6db.jpg",
+    "company": "White Cup Roasters",
+    "original_price": 480,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 4.9, "count": "21k" },
+    "category": "Latte"
+  },
+  {
+    "id": "50",
+    "image": "https://i.pinimg.com/1200x/7e/4e/24/7e4e2485952b106d324b6f4b3641e43d.jpg",
+    "company": "Dream Roast",
+    "original_price": 495,
+    "return_period": 14,
+    "delivery_date": "16 January 2026",
+    "rating": { "stars": 5.0, "count": "30k" },
+    "category": "Latte"
+  }
+
+]
