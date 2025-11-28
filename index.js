@@ -13,6 +13,7 @@ import { body, validationResult } from "express-validator";
 import { OAuth2Client } from "google-auth-library";
 import Razorpay from "razorpay";
 import fs from "fs/promises";
+import { Resend } from "resend";
 
 
 dotenv.config();
@@ -21,11 +22,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(helmet());
-app.set("trust proxy", 1);
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-
+const resend = new Resend(process.env.RESEND_API_KEY);
 mongoose
   .connect(process.env.MONGO_URI, {
     dbName: "cafedata",
@@ -268,59 +268,56 @@ app.get("/api/verify-token", verifyAccessToken, (req, res) => {
 });
 
 // ====================== MAIL SERVICE =======================
-let transporter;
-try {
- transporter = nodemailer.createTransport({
-  host:process.env.SMTP_HOST,
-  port:  Number(process.env.SMTP_PORT || 587),
-  secure: false,
-  auth: {
-   user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-  await transporter.verify();
-  console.log("Mail service ready");
-} catch (err) {
-  console.error("Mail service failed:", err.message);
-}
-
-
-// ====================== OTP & RESET =======================
 const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString();
 const OTP_TTL_MS = 5 * 60 * 1000;
 const TOKEN_TTL_MS = 10 * 60 * 1000;
 
-const otpLimiter = rateLimit({ windowMs: 20 * 60 * 1000, max: 20, message: { ok: false, message: "Too many OTP requests, try later" } });
-
-// -------------------- SEND OTP --------------------
-app.post("/api/send-otp", otpLimiter, body("email").isEmail().withMessage("Valid email required"), async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) return res.status(400).json({ message: errors.array()[0].msg });
-
-    const { email } = req.body;
-    const otp = generateOtp();
-    const otpHash = await bcrypt.hash(otp, 10);
-    const expiresAt = new Date(Date.now() + OTP_TTL_MS);
-
-    await Otpdata.deleteMany({ email });
-    await Otpdata.create({ email, otpHash, expiresAt });
-
-    await transporter.sendMail({ 
-      from: process.env.FROM_EMAIL,
-      to: email,
-       subject: "Password Reset OTP from Noir Cafe",
-       text: `Your OTP is ${otp} send by seshansu(noircafe). Valid for 5 minutes.`,
-       });
-
-    res.json({ ok: true, message: "OTP sent successfully" });
-  } catch (err) {
-    console.error("Send OTP Error:", err);
-    res.status(500).json({ message: "Server error" });
-  }
+const otpLimiter = rateLimit({
+  windowMs: 20 * 60 * 1000,
+  max: 20,
+  message: { ok: false, message: "Too many OTP requests, try later" },
 });
 
+// -------------------- SEND OTP --------------------
+app.post(
+  "/api/send-otp",
+  otpLimiter,
+  body("email").isEmail().withMessage("Valid email required"),
+  async (req, res) => {
+    try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ message: errors.array()[0].msg });
+      }
+
+      const { email } = req.body;
+      const otp = generateOtp();
+      const otpHash = await bcrypt.hash(otp, 10);
+      const expiresAt = new Date(Date.now() + OTP_TTL_MS);
+
+      await Otpdata.deleteMany({ email });
+      await Otpdata.create({ email, otpHash, expiresAt });
+
+      // ---------- Resend Mail -----------
+      const {  error } = await resend.emails.send({
+        from: process.env.FROM_EMAIL,
+        to: email,
+        subject: "Password Reset OTP from Noir Cafe",
+        text: `Your OTP is ${otp} sent by seshansu(noircafe). Valid for 5 minutes.`,
+      });
+
+      if (error) {
+        console.error("Resend Error:", error);
+        return res.status(500).json({ message: "Email sending failed" });
+      }
+
+      res.json({ ok: true, message: "OTP sent successfully" });
+    } catch (err) {
+      console.error("Send OTP Error:", err);
+      res.status(500).json({ message: "Server error" });
+    }
+  }
+);
 
 
 // -------------------- 2️⃣ Verify OTP --------------------
