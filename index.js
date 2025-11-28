@@ -21,8 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(helmet());
+app.set("trust proxy", 1);
 
-
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 
 mongoose
@@ -269,17 +270,21 @@ app.get("/api/verify-token", verifyAccessToken, (req, res) => {
 // ====================== MAIL SERVICE =======================
 let transporter;
 try {
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || 465),
-    secure: true,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-  });
+const transporter = nodemailer.createTransport({
+  host:process.env.SMTP_HOST,
+  port:  Number(process.env.SMTP_PORT || 587),
+  secure: false,
+  auth: {
+   user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
   await transporter.verify();
   console.log("Mail service ready");
 } catch (err) {
   console.error("Mail service failed:", err.message);
 }
+
 
 // ====================== OTP & RESET =======================
 const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString();
@@ -301,14 +306,13 @@ app.post("/api/send-otp", otpLimiter, body("email").isEmail().withMessage("Valid
 
     await Otpdata.deleteMany({ email });
     await Otpdata.create({ email, otpHash, expiresAt });
-
-    await transporter.sendMail({
-      from: process.env.FROM_EMAIL,
+    
+    await transporter.sendMail({ 
+      from:  process.env.FROM_EMAIL,
       to: email,
-      subject: "Password Reset OTP",
-      text: `Your OTP is ${otp}. Valid for 5 minutes.`,
-      html: `<p>Your OTP is <b>${otp}</b>. Valid for 5 minutes.</p>`,
-    });
+       subject: "Password Reset OTP from Noir Cafe",
+       text: `Your OTP is ${otp} send by seshansu(noircafe). Valid for 5 minutes.`,
+       });
 
     res.json({ ok: true, message: "OTP sent successfully" });
   } catch (err) {
@@ -369,7 +373,7 @@ app.post(
   async (req, res) => {
     try {
       const { email, newPassword } = req.body;
-      const rawToken = req.headers["x-reset-token"]; // <- frontend sends token in header
+      const rawToken = req.headers["x-reset-token"]; 
 
       if (!rawToken)
         return res.status(400).json({ message: "No reset token provided" });
