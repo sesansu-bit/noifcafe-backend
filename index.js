@@ -270,7 +270,7 @@ app.get("/api/verify-token", verifyAccessToken, (req, res) => {
 // ====================== MAIL SERVICE =======================
 let transporter;
 try {
-const transporter = nodemailer.createTransport({
+ transporter = nodemailer.createTransport({
   host:process.env.SMTP_HOST,
   port:  Number(process.env.SMTP_PORT || 587),
   secure: false,
@@ -306,9 +306,9 @@ app.post("/api/send-otp", otpLimiter, body("email").isEmail().withMessage("Valid
 
     await Otpdata.deleteMany({ email });
     await Otpdata.create({ email, otpHash, expiresAt });
-    
+
     await transporter.sendMail({ 
-      from:  process.env.FROM_EMAIL,
+      from: process.env.FROM_EMAIL,
       to: email,
        subject: "Password Reset OTP from Noir Cafe",
        text: `Your OTP is ${otp} send by seshansu(noircafe). Valid for 5 minutes.`,
