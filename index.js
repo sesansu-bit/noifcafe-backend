@@ -53,10 +53,10 @@ async function seed() {
 
 
 const createAccessToken = (user) =>
-  jwt.sign({ id: user._id, email: user.email }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "960d" });
+  jwt.sign({ id: user._id, email: user.email }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "1d" });
 
 const createRefreshToken = (user) =>
-  jwt.sign({ id: user._id, email: user.email }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "1660d" });
+  jwt.sign({ id: user._id, email: user.email }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "360d" });
 
 
 
