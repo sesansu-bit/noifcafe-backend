@@ -517,7 +517,9 @@ app.post("/api/verify-payment", async (req, res) => {
 
 
 
-
+app.get("/payment-success", (req, res) => {
+  res.send("Payment successful! You can close the window.");
+});
 
 
 
